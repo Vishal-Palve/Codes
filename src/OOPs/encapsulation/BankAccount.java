@@ -1,7 +1,7 @@
 package OOPs.encapsulation;
 
 public class BankAccount {
-private String accountholder ;
+private String accountholder;
 private double balance;
 BankAccount(String accountholder, double initialbalance){
     this.accountholder = accountholder;
@@ -10,6 +10,10 @@ BankAccount(String accountholder, double initialbalance){
 
     public double getBalance() {
         return balance;
+    }
+
+    public void setBalance(double balance) {
+        this.balance = balance;
     }
 
     public String getAccountholder() {

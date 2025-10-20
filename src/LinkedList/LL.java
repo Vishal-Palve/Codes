@@ -44,6 +44,8 @@ public class LL {
         temp.next = node;
         size++;
     }
+
+
     public void deleteLast() {
         if (head == null) {
             System.out.println("List is empty, nothing to delete");

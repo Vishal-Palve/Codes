@@ -26,14 +26,12 @@ public class StreamAPI {
         names.stream()
                 .map(String::toUpperCase)   // convert to uppercase
                 .forEach(System.out::println);
-
-
+        
         List<Integer> squares = numbers.stream()
                 .map(n -> n * n)
                 .collect(Collectors.toList());
 
         System.out.println(squares);
-
 
 
         s3.forEach(n -> System.out.println(n));
@@ -42,10 +40,7 @@ public class StreamAPI {
                 .filter(n -> n%2 == 0)
                 .map(n -> n*2)
                 .reduce(0, (c,e) -> c+e);
+        System.out.println("Result");
         System.out.println(result);
-
-
-
-
     }
 }
