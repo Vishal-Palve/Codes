@@ -1,19 +1,30 @@
 package LeetCode;
 
 public class Q33 {
-    public static int binarysearch(int[] nums, int target, int s, int e){
-        while(s<=e){
-            int m = s + (e-s)/2;
-            if(target == nums[m]){
-                return m;
-            }
-            else if (target >= nums[m]){
+    public static int search(int[] nums, int target) {
+        int s = 0, e = nums.length - 1;
 
+        while(s <= e){
+            int m = s + (e - s)/2;
+
+            if(nums[m] == target) return m;
+
+            if(nums[s] <= nums[m]){
+                if(nums[s] <= target && target < nums[m]){
+                    e = m - 1;
+                } else {
+                    s = m + 1;
+                }
             }
             else {
-                s = m +1;
+                if(nums[m] < target && target <= nums[e]){
+                    s = m + 1;
+                } else {
+                    e = m - 1;
+                }
             }
         }
+
         return -1;
     }
 
@@ -21,8 +32,8 @@ public class Q33 {
     public static void main(String[] args) {
         int[] nums = {4,5,6,7,0,1,2};
         int[] nums2 = {5, 1, 3};
-        System.out.println(binarysearch(nums,0,0, nums.length - 1));
-        System.out.println(binarysearch(nums2,5,0, nums.length - 1));
+        System.out.println(search(nums,0));
+        System.out.println(search(nums2,5));
 
     }
 }
