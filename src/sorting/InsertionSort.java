@@ -1,4 +1,4 @@
-package sorting.src;
+package sorting;
 
 import java.util.Arrays;
 
@@ -24,13 +24,10 @@ public class InsertionSort {
             for (int j = i+1; j > 0 ; j--) {
                 if(arr[j] < arr[j-1]){
                     swap(arr ,j , j-1 );
-
                 }
                 else{
                     break;
                 }
-
-
             }
         }
     return arr ;}

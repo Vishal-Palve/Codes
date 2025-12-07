@@ -12,7 +12,7 @@ public class rotatedBinary {
         }
 
 
-return -1;
+        return -1;
         }
 
 }
