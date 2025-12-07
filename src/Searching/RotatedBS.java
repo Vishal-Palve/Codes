@@ -1,33 +1,13 @@
+package Searching;
+
 public class RotatedBS {
 
     public static void main(String[] args ){
         int[] arr = {4, 5, 6, 7, 0, 1, 2};
 
-        System.out.println( rbs2(arr , 0 , 7 , arr.length));
+        System.out.println( rbs2(arr , 0 ,0, arr.length ));
 
     }
-
-    static int RBS(int[] arr ,int s , int e , int target){
-           int m = s + (e-s)/2;
-        if(m == arr.length){
-            return -1;
-        }
-        if (arr[m] == target){
-            return m;
-        }
-        if(arr[s] >= arr[m]){
-            return RBS(arr , m+1 , e , target);
-        }
-        if(arr[s] <= arr[m]){
-            return RBS(arr , s , m-1 , target);
-        }
-
-return 0;
-    }
-
-
-
-
         static int rbs2(int[] arr, int s, int key, int e) {
             if (s > e) {
                 return -1;
