@@ -7,7 +7,7 @@ public class Q121 {
 
             for (int i = 1; i < prices.length; i++) {
                 if (prices[i] < minPrice) {
-                    minPrice = prices[i]; // update buying price
+                    minPrice = prices[i];
                 } else {
                     maxProfit = Math.max(maxProfit, prices[i] - minPrice);
                 }
