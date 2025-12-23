@@ -7,7 +7,6 @@ public class BoxPrice extends BoxWeight {
     BoxPrice(double l, double h, double w, double weight , double price) {
         super(l, h, w, weight);
         fun();
-
         this.cost = price;
     }
 
