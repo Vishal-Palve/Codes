@@ -20,13 +20,13 @@ public class NiceCar  {
         player.stop();
     }
 
-    public void stopengine(){
+    public void stopEngine(){
         engine.stop();
     }
-    public void startengine(){
+    public void startEngine(){
         engine.start();
     }
-    public void upgradeengine(){
+    public void upgradeEngine(){
         this.engine = new ElectricEngine();
     }
 }

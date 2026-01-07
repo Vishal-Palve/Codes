@@ -55,9 +55,9 @@ public class NQueens {
                 }
                 else{
                 System.out.print("X ");
-            }}
+               }
+            }
             System.out.println();
-
         }
 
     }

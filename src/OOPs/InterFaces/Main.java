@@ -13,10 +13,10 @@ public class Main {
 //        carmedia.start();
 
         NiceCar car = new NiceCar();
-        car.startengine();
+        car.startEngine();
         car.startMusic();
-        car.upgradeengine();
-        car.startengine();
+        car.upgradeEngine();
+        car.startEngine();
 
     }
 }

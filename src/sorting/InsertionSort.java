@@ -7,7 +7,7 @@ public class InsertionSort {
     public static void main(String[] args) {
 
         int[] mat = {4, -5, 7, -8, 6, 9};
-        InsertionSort(mat);
+        insertionSort(mat);
         System.out.println(Arrays.toString(mat));
     }
 
@@ -18,7 +18,7 @@ public class InsertionSort {
 
     }
 
-    static int[] InsertionSort(int[] arr ){
+    static int[] insertionSort(int[] arr ){
 
         for (int i = 0; i < arr.length-1 ; i++) {
             for (int j = i+1; j > 0 ; j--) {
@@ -30,5 +30,6 @@ public class InsertionSort {
                 }
             }
         }
-    return arr ;}
+    return arr;
+    }
 }

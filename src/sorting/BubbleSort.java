@@ -6,7 +6,7 @@ public class BubbleSort {
 
     public static void main(String[] args){
         int[] mat = {5 , 3 ,1 ,4 , 2};
-        Bubble(mat);
+        bubbleSort(mat);
         System.out.println(Arrays.toString(mat));
 
     }
@@ -15,7 +15,7 @@ public class BubbleSort {
         arr[f]=arr[s];
         arr[s]= temp;
     }
-    static void Bubble(int[] arr){
+    static void bubbleSort(int[] arr){
            boolean swapped;
 
         for (int i = 0; i  < arr.length - 1 ; i++) {
@@ -41,6 +41,10 @@ public class BubbleSort {
             }
         }
         return arr;
+    }
+
+    public static int[] bubbleSortRecursive(int[] arr){
+        return new int[0];
     }
 
 }

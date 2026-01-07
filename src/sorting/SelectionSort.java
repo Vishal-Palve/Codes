@@ -6,10 +6,10 @@ public class SelectionSort {
 
     public static void main(String[] args) {
         int[] mat = {4, -5, 7, -8, 6, 9};
-        Ssort(mat);
+        selectionSort(mat);
         System.out.println(" Sorted Array " + Arrays.toString(mat));
     }
-    static int[] Ssort(int[] arr ){
+    static int[] selectionSort(int[] arr ){
    for (int i = 0; i < arr.length ; i++) {
             int last = arr.length - i - 1;
             int  maxindex = getMaxIndex(arr ,  0 , last);
