@@ -2,16 +2,26 @@ package Practice;
 
 public class Main {
     public static void main(String[] args) {
-            int[] nums = {2,4,88,9,45,96,1};
-            int max = 0;
-            for(int num : nums){
-                if(num > max){
-                    max = num;
-                }
-            }
-        System.out.println(max);
+//            int[] nums = {2,4,88,9,45,96,1};
+//            int max = 0;
+//            for(int num : nums){
+//                if(num > max){
+//                    max = num;
+//                }
+//            }
+//        System.out.println(max);
+
+        System.out.println(fact(3));
     }
 
+
+    public static int fact(int n){
+        int prod =1;
+        for (int i = 1; i <= n ; i++) {
+          prod *= i;
+        }
+        return prod;
+    }
     public static void printDiamond(int n) {
         // Upper half (including middle)
         for (int i = 0; i < n; i++) {

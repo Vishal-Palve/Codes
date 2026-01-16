@@ -23,6 +23,7 @@ public class PrintMatrix {
             return;
         }
         if (!maze[r][c]) {
+
             return;
         }
         maze[r][c] = false;
