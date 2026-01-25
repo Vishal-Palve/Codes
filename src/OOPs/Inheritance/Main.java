@@ -2,7 +2,7 @@ package OOPs.Inheritance;
 
 public class Main {
     public static void main(String[] args) {
-        Box box1 = new Box(12 , 45 ,4);
+        Box box1 = new Box(12, 45, 4);
         Box box2 = new Box(box1);
         System.out.println(box1.l + " " + box2.l);
         box1.l = 7;

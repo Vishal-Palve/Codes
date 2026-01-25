@@ -4,7 +4,7 @@ public class Demo {
     public static void main(String[] args) {
 
         int i = 0;
-        int j = 0;
+        int j = 12;
 
 
         int nums[] = new int[5];
@@ -12,7 +12,7 @@ public class Demo {
    try {
        System.out.println(nums[2]);
        System.out.println(nums[5]);
-   }catch (Exception a){
+   } catch (Exception a){
        System.out.println("exception " + a);
    }
         try {
