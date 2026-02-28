@@ -4,6 +4,7 @@ public class Apple {
     public static void main(String[] args) {
         System.out.println(removeIfExists("ajbjsapplefrff"));
     }
+
     public static String remove(String str){
         if(str.isEmpty()){
             return "";
@@ -13,6 +14,7 @@ public class Apple {
         }
         return str.charAt(0) + remove(str.substring(1) );
     }
+    
     public static String removeIfExists(String str){
         if(str.isEmpty()){
             return "";

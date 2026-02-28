@@ -13,7 +13,6 @@ public class Subset {
        for(List<Integer> list : ans){
            System.out.println(list);
        }
-
     }
 
     static List<List<Integer>> subset(int[] arr){
