@@ -21,10 +21,10 @@ public class SubArrayProductLessThanK {
     }
 
     public static void main(String[] args) {
-        int[] arr = {10,5,2,6};
-        //System.out.println(numSubarrayProductLessThanK(arr, 100));
-        int[] nums = {3,6,8,1,2,89};
-        System.out.println(secondLargest(nums));
+        int[] arr = {10, 5, 2, 6};
+        System.out.println(numSubarrayProductLessThan(arr, 100));
+//        int[] nums = {3, 6, 8, 1, 2, 89};
+//        System.out.println(secondLargest(nums));
     }
 
 
@@ -32,13 +32,33 @@ public class SubArrayProductLessThanK {
         int max = Integer.MIN_VALUE;
         int smax = Integer.MIN_VALUE;
         for (int num : nums) {
-            if(num > max){
+            if (num > max) {
                 smax = max;
                 max = num;
             }
         }
         return smax;
     }
+
+
+    public static int numSubarrayProductLessThan(int[] nums, int k) {
+        if (k <= 1) return 0;
+
+        int low = 0, high = 0, n = nums.length, prod = 1, count = 0;
+
+        while (high < n) {
+            prod *= nums[high];
+            while (prod >= k && low <= high) {
+                prod /= nums[low];
+                low++;
+            }
+
+            count += (high - low + 1);
+            high++;
+        }
+        return count;
+    }
+
 }
 
 
