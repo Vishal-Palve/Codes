@@ -1,6 +1,5 @@
 package subsequences;
 
-import javax.security.auth.login.AccountExpiredException;
 import java.util.ArrayList;
 
 public class Subseq {
