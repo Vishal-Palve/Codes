@@ -26,7 +26,7 @@ public class Practice {
 
         }
         return ans;
-}
+    }
 
     public static int minSubArrayLen(int target, int[] nums) {
         int low = 0;
@@ -68,13 +68,13 @@ public class Practice {
                 return true;
             } else if (target > nums[mid] && target > nums[high]) {
                 high = mid;
-            } else if (nums[mid] == nums[low] && nums[low] == nums[high]) {
-                return linearSearch(nums, target);
+            } else if (nums[low] == nums[high]) {
+                low++;
+                high--;
             } else {
                 low = mid + 1;
             }
         }
-
         return false;
     }
 
@@ -84,7 +84,6 @@ public class Practice {
                 return true;
 
             }
-
         }
         return false;
     }
