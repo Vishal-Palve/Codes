@@ -1,5 +1,7 @@
 package collectionframework;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Vector;
 
 public class VectorDemo {
@@ -30,7 +32,7 @@ public class VectorDemo {
 //        vector1.clear();
 //        System.out.println(vector1);
 
-
+        List<Integer> list2 = new ArrayList<>();
         Vector<Integer> list = new Vector<>();
         Thread t1 = new Thread(() -> {
             for (int i = 0; i < 1000; i++) {
