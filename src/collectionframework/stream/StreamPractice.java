@@ -132,6 +132,7 @@ public class StreamPractice {
         );
         // Write stream here -> Expected: Month with highest DEBIT total
 
+
         // Q11: Second highest salary
         List<Employee> employees11 = Arrays.asList(
                 new Employee("Alice", 50000),
@@ -149,5 +150,7 @@ public class StreamPractice {
         map12.put("xyz", Arrays.asList(6));
         map12.put("java", Arrays.asList(7, 8, 9, 10));
         // Write stream here -> Expected: [3, 4, 5, 7, 8, 9, 10]
+
+
     }
 }
