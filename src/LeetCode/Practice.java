@@ -1,6 +1,10 @@
 package LeetCode;
 
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class Practice {
 
     public static void main(String[] args) {
@@ -9,8 +13,35 @@ public class Practice {
 
         int[] arr = {1, -2, -2, 3};
         System.out.println(maximumSum(arr));
+
+        int[] nums = {0,0,0,0};
+        System.out.println(threeSum(nums));
     }
 
+
+    public static List<List<Integer>> threeSum(int[] nums) {
+
+        List<List<Integer>> ans = new ArrayList<>();
+        Arrays.sort(nums);
+        int left = 0, n = nums.length, right = n - 1;
+
+        for(int i = 1; i <= n - 2; i++){
+            int sum = nums[left] + nums[right] + nums[i];
+
+            if(sum == 0){
+                ans.add(Arrays.asList(nums[left]  , nums[i] , nums[right]));
+                left++;
+                right--;
+            }
+            else if (sum < 0){
+                left++;
+            }
+            else {
+                right--;
+            }
+        }
+        return ans;
+    }
     public static int maximumSum(int[] arr) {
         int noDelete = arr[0];
         int delete = Integer.MIN_VALUE;

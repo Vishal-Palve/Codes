@@ -28,9 +28,21 @@ public class RecLinearSearch {
         return list;
     }
 
+    public static boolean sortedCheck(int[] nums, int s){
+        if(s == nums.length - 1){
+            return true;
+        }
+        if(nums[s] <= nums[s+1]){
+            return sortedCheck(nums, s + 1);
+        }
+        return false;
+    }
         public static void main (String[]args){
             int[] arr = {1, 3, 4, 5, 7, 5, 8};
+            int[] nums = {1, 3, 4, 5, 5, 8,0};
+
 
             System.out.println(search2(arr, 5, 0));
+            System.out.println(sortedCheck(nums,0));
         }
     }

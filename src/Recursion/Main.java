@@ -7,6 +7,7 @@ public class Main {
      int ans = binarySearch(arr, 0, arr.length -1, 4);
         System.out.println(ans);
     }
+
     public static void message(int n ){
         if(n == 0){
             return;

@@ -1,25 +1,22 @@
 package TCS;
 import java.util.*;
 public class Maths {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
 
-        double n = sc.nextInt();
-        double ans = 0;
-        if(n < 1000) {
-            double d = n * 0.05;
-        ans = n - d;
-        }
-        else if( n < 5000){
-            double d = n * 0.10;
-            ans = n - d;
-        }
-
-        else{
-            double d = n * 0.15;
-            ans = n - d;
-        }
-        System.out.println(ans);
-        System.out.printf("%.2f", ans);
+    static{
+        System.out.println("Hiii");
     }
+    public static void main(String[] args) {
+        System.out.println(sumRange(0,10000));
+    }
+
+    static int sumRange(int m, int n){
+
+        int sum = 0;
+
+        for(int i = m ; i <= n; i++){
+            sum += i;
+        }
+        return sum ;
+    }
+
 }
