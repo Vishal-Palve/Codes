@@ -6,8 +6,8 @@ public class BubbleSort {
 
     public static void main(String[] args){
         int[] mat = {5 , 3 ,1 ,4 , 2};
-        bubbleSort(mat);
-        System.out.println(Arrays.toString(mat));
+
+        System.out.println(Arrays.toString(bSort(mat)));
 
     }
     static void swap(int[] arr , int f , int s ){
@@ -34,9 +34,9 @@ public class BubbleSort {
     }
     static int[] bSort(int[] arr){
         for (int i = 0; i < arr.length; i++) {
-            for (int j =  1; j < arr.length - i; j++) {
-                if(arr[i] > arr[j]){
-                    swap(arr , i ,j);
+            for (int j =  1; j < arr.length -i; j++) {
+                if(arr[j-1] > arr[j]){
+                    swap(arr , j-1 ,j);
                 }
             }
         }
